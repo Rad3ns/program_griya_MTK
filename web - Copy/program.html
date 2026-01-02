@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Program - Griya Matematika</title>
+    <link rel="stylesheet" href="style2.css" />
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">Griya Matematika</h1>
+            <nav class="nav">
+                <ul class="menu">
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="program.html">Program/Kursus</a></li>
+                    <li><a href="pengajar.html">Pengajar & Tim</a></li>
+                    <li><a href="kontak.html">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <section id="program" class="section program">
+            <div class="container">
+                <h2>Program/Kursus</h2>
+                <h3>Mata Pelajaran</h3>
+                <ul class="program-list">
+                    <li>Matematika</li>
+                    <li>IPA (Fisika, Kimia, Biologi)</li>
+                    <li>Bahasa Indonesia</li>
+                </ul>
+                <h3>Jadwal Kelas & Durasi</h3>
+                <p>Berikut jadwal kelas dengan berbagai slot waktu yang fleksibel. Pilih slot sesuai ketersediaan siswa.</p>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Mata Pelajaran</th>
+                                <th>Hari</th>
+                                <th>Slot Waktu</th>
+                                <th>Durasi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td rowspan="3">Matematika</td><td rowspan="3">Senin-Sabtu</td><td>14:00 - 16:00</td><td>2 jam</td></tr>
+                            <tr><td>16:00 - 18:00</td><td>2 jam</td></tr>
+                            <tr><td>18:00 - 20:00</td><td>2 jam</td></tr>
+                            <tr><td rowspan="3">IPA</td><td rowspan="3">Senin-Sabtu</td><td>14:00 - 16:00</td><td>2 jam</td></tr>
+                            <tr><td>16:00 - 18:00</td><td>2 jam</td></tr>
+                            <tr><td>18:00 - 20:00</td><td>2 jam</td></tr>
+                            <tr><td rowspan="3">Bahasa Indonesia</td><td rowspan="3">Senin-Sabtu</td><td>14:00 - 16:00</td><td>2 jam</td></tr>
+                            <tr><td>16:00 - 18:00</td><td>2 jam</td></tr>
+                            <tr><td>18:00 - 20:00</td><td>2 jam</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Form Pendaftaran Les</h3>
+                <p><strong>Catatan:</strong> Siswa dapat memilih maksimal 2 jadwal dalam 1 minggu dan akan mendapat 2 tutor berbeda.</p>
+
+                <form id="registrationForm">
+                    <fieldset>
+                        <legend>Biodata Calon Siswa</legend>
+                        <label for="nama">Nama Lengkap:</label>
+                        <input type="text" id="nama" name="nama" required><br><br>
+
+                        <label for="usia">Usia:</label>
+                        <input type="number" id="usia" name="usia" min="1" required><br><br>
+
+                        <label for="sekolah">Sekolah:</label>
+                        <input type="text" id="sekolah" name="sekolah" required><br><br>
+
+                        <label for="alamat">Alamat:</label>
+                        <textarea id="alamat" name="alamat" required></textarea><br><br>
+
+                        <label for="kontak">Nomor Kontak Orang Tua:</label>
+                        <input type="tel" id="kontak" name="kontak" required><br><br>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Pilih Program Les</legend>
+
+                        <h4>Jadwal 1</h4>
+                        <label for="mapel1">Mata Pelajaran:</label>
+                        <select id="mapel1" name="mapel1" required>
+                            <option value="">Pilih Mata Pelajaran</option>
+                            <option value="Matematika">Matematika</option>
+                            <option value="IPA">IPA (Fisika, Kimia, Biologi)</option>
+                            <option value="Bahasa Indonesia">Bahasa Indonesia</option>
+                        </select><br><br>
+
+                        <label for="hari1">Hari:</label>
+                        <select id="hari1" name="hari1" required>
+                            <option value="">Pilih Hari</option>
+                            <option value="Senin">Senin</option>
+                            <option value="Selasa">Selasa</option>
+                            <option value="Rabu">Rabu</option>
+                            <option value="Kamis">Kamis</option>
+                            <option value="Jumat">Jumat</option>
+                            <option value="Sabtu">Sabtu</option>
+                        </select><br><br>
+
+                        <label for="jam1">Slot Waktu:</label>
+                        <select id="jam1" name="jam1" required>
+                            <option value="">Pilih Slot Waktu</option>
+                            <option value="14:00 - 16:00">14:00 - 16:00</option>
+                            <option value="16:00 - 18:00">16:00 - 18:00</option>
+                            <option value="18:00 - 20:00">18:00 - 20:00</option>
+                        </select><br><br>
+
+                        <h4>Jadwal 2 (Opsional)</h4>
+                        <label for="mapel2">Mata Pelajaran:</label>
+                        <select id="mapel2" name="mapel2">
+                            <option value="">Pilih Mata Pelajaran</option>
+                            <option value="Matematika">Matematika</option>
+                            <option value="IPA">IPA (Fisika, Kimia, Biologi)</option>
+                            <option value="Bahasa Indonesia">Bahasa Indonesia</option>
+                        </select><br><br>
+
+                        <label for="hari2">Hari:</label>
+                        <select id="hari2" name="hari2">
+                            <option value="">Pilih Hari</option>
+                            <option value="Senin">Senin</option>
+                            <option value="Selasa">Selasa</option>
+                            <option value="Rabu">Rabu</option>
+                            <option value="Kamis">Kamis</option>
+                            <option value="Jumat">Jumat</option>
+                            <option value="Sabtu">Sabtu</option>
+                        </select><br><br>
+
+                        <label for="jam2">Slot Waktu:</label>
+                        <select id="jam2" name="jam2">
+                            <option value="">Pilih Slot Waktu</option>
+                            <option value="14:00 - 16:00">14:00 - 16:00</option>
+                            <option value="16:00 - 18:00">16:00 - 18:00</option>
+                            <option value="18:00 - 20:00">18:00 - 20:00</option>
+                        </select><br><br>
+                    </fieldset>
+
+                    <button type="button" id="checkTutor">Cek Tutor Tersedia</button>
+
+                    <div id="tutorResult" style="margin-top: 20px; display: none;">
+                        <h4>Tutor yang Ditetapkan:</h4>
+                        <p id="tutorInfo"></p>
+                    </div>
+
+                    <button type="submit" style="margin-top: 20px;">Daftar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Griya Matematika. Semua hak cipta dilindungi.</p>
+        </div>
+    </footer>
+
+    <!-- SUPABASE -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script>
+        // ====== SUPABASE CLIENT ======
+        const SUPABASE_URL = "https://tdodcciufzyyxczgzgbc.supabase.co";
+        const SUPABASE_KEY = "sb_publishable_z5IlycNf6j1cWCbu88DY6g_wBPEcVmj";
+        const db = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+        // ====== TUTOR LOGIC ======
+        const tutorMapping = { /* ... semua mapping tutor sama seperti versi kamu ... */ };
+
+        function getTingkat(usia) {
+            if (usia >= 6 && usia <= 12) return "SD";
+            if (usia >= 13 && usia <= 15) return "SMP";
+            if (usia >= 16 && usia <= 18) return "SMA";
+            return null;
+        }
+
+        function getTutor(mapel, tingkat, hari, jam) {
+            if (tutorMapping[mapel] && tutorMapping[mapel][tingkat] && tutorMapping[mapel][tingkat][hari] && tutorMapping[mapel][tingkat][hari][jam]) {
+                return tutorMapping[mapel][tingkat][hari][jam];
+            }
+            return "Tidak ada tutor tersedia untuk kombinasi ini.";
+        }
+
+        document.getElementById('checkTutor').addEventListener('click', function() {
+            const usia = parseInt(document.getElementById('usia').value);
+            const tingkat = getTingkat(usia);
+            if (!tingkat) return alert('Usia tidak valid (6-18 tahun).');
+
+            const mapel1 = document.getElementById('mapel1').value;
+            const hari1 = document.getElementById('hari1').value;
+            const jam1 = document.getElementById('jam1').value;
+
+            const mapel2 = document.getElementById('mapel2').value;
+            const hari2 = document.getElementById('hari2').value;
+            const jam2 = document.getElementById('jam2').value;
+
+            let tutorInfo = "";
+
+            if (mapel1 && hari1 && jam1) tutorInfo += `Slot 1: ${mapel1} (${tingkat}) pada ${hari1} jam ${jam1} - ${getTutor(mapel1, tingkat, hari1, jam1)}<br>`;
+            if (mapel2 && hari2 && jam2) tutorInfo += `Slot 2: ${mapel2} (${tingkat}) pada ${hari2} jam ${jam2} - ${getTutor(mapel2, tingkat, hari2, jam2)}<br>`;
+
+            if (tutorInfo) {
+                document.getElementById('tutorInfo').innerHTML = tutorInfo;
+                document.getElementById('tutorResult').style.display = 'block';
+            } else {
+                alert('Harap lengkapi setidaknya Slot 1!');
+            }
+        });
+
+        // ====== FORM SUBMIT ======
+        document.getElementById("registrationForm").addEventListener("submit", async function(e) {
+            e.preventDefault();
+
+            const usia = parseInt(document.getElementById("usia").value);
+            const tingkat = getTingkat(usia);
+            if (!tingkat) return alert("Usia tidak valid (6–18 tahun)");
+
+            const data = {
+                nama: nama.value,
+                usia,
+                tingkat,
+                sekolah: sekolah.value,
+                alamat: alamat.value,
+                kontak: kontak.value,
+                mapel1: mapel1.value,
+                hari1: hari1.value,
+                jam1: jam1.value,
+                mapel2: mapel2.value || null,
+                hari2: hari2.value || null,
+                jam2: jam2.value || null
+            };
+
+            const { error } = await db.from("pendaftaran").insert([data]);
+
+            if (error) {
+                console.error(error);
+                alert("❌ Gagal menyimpan data");
+            } else {
+                alert("✅ Pendaftaran berhasil!");
+                registrationForm.reset();
+                tutorResult.style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>
